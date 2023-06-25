@@ -37,3 +37,14 @@ code {
   color: white;
 }
 
+.material-symbols-outlined.header-icon{
+ font-size: 35px !important;
+}
+
+.header-title-container{
+  display: flex;
+  gap: 1em;
+  flex-direction: row;
+  align-items: center;
+}
+
