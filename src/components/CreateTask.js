@@ -70,17 +70,19 @@ function CreateTask(props){
     }
 
     return(
-        <div>
+        <div className="create-task-form-container">
             <form onSubmit={(ev) => handleSubmit(ev)} className="create-task-form">
+
+                <h2 className="form-title">Create Task</h2>
                 
                 <input minLength={3} type="text" onChange={(ev) => handleTaskNameChange(ev)} placeholder="task name" ></input>
 
-                <input type="text" onChange={(ev) => handleTaskDescription(ev)} placeholder="description" ></input>
+                <textarea rows={4} type="text" onChange={(ev) => handleTaskDescription(ev)} placeholder="description" />
 
-                <div>
+                <div className="etc-container">
                     
-                    <input type="number" onChange={(ev) => handleTaskHoursCompletion(ev)} ></input>
-                    <input type="number" onChange={(ev) => handleTaskMinutesCompletion(ev)} ></input>
+                    <input type="number" onChange={(ev) => handleTaskHoursCompletion(ev)} placeholder="Hours"></input>
+                    <input type="number" onChange={(ev) => handleTaskMinutesCompletion(ev)} max={60} placeholder="Minutes"></input>
                 </div>
 
                 <button type="submit">Save Task</button>

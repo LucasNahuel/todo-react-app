@@ -19,6 +19,7 @@ body {
   background-position: 50% 0%;
   height: 100%;
   width: 100%;
+  color:white;
 }
 
 code {
@@ -48,3 +49,72 @@ code {
   align-items: center;
 }
 
+.create-task-form-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-task-form{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 1em;
+  backdrop-filter: blur(10px);
+  
+  background-color: rgba(0,0,0,0.2);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+input{
+  border-radius: 0.5em;
+  border-style: none;
+  outline: none;
+  font-size: medium;
+  padding: 1em 0.5em;
+  font-weight: 600;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+button{
+  border-radius: 0.5em;
+  border-style: none;
+  outline: none;
+  font-size: medium;
+  padding: 1em 0.5em;
+  background-color: pink;
+  
+  font-weight: 700;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.etc-container{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+textarea{
+  outline: none;
+  border-radius: 0.5em;
+  border-style: none;
+  font-size: large;
+  padding: 1em 0.5em;
+  font-weight: 700em;
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  max-width: 600px;
+}
+
+
+.form-title{
+  margin-block: 0.5em;
+}
