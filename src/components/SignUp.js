@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import ErrorNotification from './ErrorNotification';
 
-function SignIn(props){
+function SignUp(props){
 
 
     const [formState, setFormState] = useState(null);
 
+    const [notification, setNotification] = useState(null);
 
 
     function handleSubmit(ev){
@@ -87,11 +89,11 @@ function SignIn(props){
     }
 
     return(
-        <div className="create-task-form-container">
+        <div className="form-container">
 
-            <form onSubmit={(ev) => handleSubmit(ev)} className="create-task-form">
+            <form onSubmit={(ev) => handleSubmit(ev)} className="form">
 
-                <h2 className="form-title">Sign in</h2>
+                <h2 className="form-title">Sign up</h2>
 
                 <input minLength={3} maxLength={256} type='text' placeholder='username' onChange={(ev) => handleUsernameChange(ev)}></input>
 
@@ -102,6 +104,8 @@ function SignIn(props){
                 <button type="submit">Register</button>
             </form>
 
+            {notification}
+
         </div>
     );
 
@@ -109,4 +113,4 @@ function SignIn(props){
 }
 
 
-export default SignIn;
+export default SignUp;

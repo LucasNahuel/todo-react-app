@@ -70,8 +70,8 @@ function CreateTask(props){
     }
 
     return(
-        <div className="create-task-form-container">
-            <form onSubmit={(ev) => handleSubmit(ev)} className="create-task-form">
+        <div className="form-container">
+            <form onSubmit={(ev) => handleSubmit(ev)} className="form">
 
                 <h2 className="form-title">Create Task</h2>
                 
