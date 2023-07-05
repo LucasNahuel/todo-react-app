@@ -42,6 +42,26 @@ function SignUp(props){
 
 
         //should check if the username is taken
+
+        fetch(process.env.REACT_APP_API_URL+"usernameExists?username="+ev.target.value, {
+            headers: {
+                "Content-Type": "application/json",
+            }
+        }).then(
+            (response) =>{
+                if(response.ok){
+                    return response.json();
+                }
+            }
+        ).then(
+            (data) => {
+                if(data.value == true){
+                    ev.target.setCustomValidity("The username is already taken");
+                }else{
+                    ev.target.setCustomValidity("");
+                }
+            }
+        );
     }
 
     function handlePasswordChange(ev){
